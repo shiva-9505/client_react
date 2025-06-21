@@ -2,7 +2,7 @@ import React,{use, useEffect,useState} from 'react'
 import { API_URL } from '../api'
 import { FaArrowAltCircleLeft } from "react-icons/fa"
 import { FaArrowAltCircleRight } from "react-icons/fa"
-import { Triangle } from 'react-loader-spinner'
+import { ClipLoader, RingLoader } from 'react-spinners'
 
 const Chains = () => {
 
@@ -58,15 +58,7 @@ const Chains = () => {
         <div className="loader">
             Your food🥗🥗 is loading....
         </div>
-            <Triangle
-                visible={true}
-                height="80"
-                width="80"
-                color="#4fa94d"
-                ariaLabel="triangle-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                />
+            <RingLoader color="#36d7b7" height={80} width={80} />
         </>
     }
     </div>
