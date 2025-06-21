@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const TopBar = () => {
   return (
    <section className="topBarSection">
         <div className="companyTitle">
-            <h2>Tomato</h2>
+            <Link to='/' className='link'>
+                <h2>TOMATO</h2>
+            </Link>
         </div>
         <div className="searchBar">
             <input type="text" placeholder='Search....' />

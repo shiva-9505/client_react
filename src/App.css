@@ -26,6 +26,10 @@ body{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
+.companyTitle h2{
+  color: rgb(220, 0, 0);
+  text-decoration: none;
+}
 
 .itemSection{
   display: flex;
@@ -68,6 +72,24 @@ body{
   object-fit: cover;
   margin-right: 30px;
   border-radius: 30px;
+}
+
+.btnSection{
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 50px;
+  right: 10px;
+  background-color: none;
+}
+.btnSection button{
+  border: none;
+ background-color:transparent;
+}
+.btnIcons{
+  font-size: x-large;
+
 }
 
 /* Firm section */
@@ -123,6 +145,10 @@ body{
   font-size: small;
   color: gray;
 }
+.activeButton{
+  background-color: darkblue;
+  color: white;
+}
 
 
 /* productSection */
@@ -170,10 +196,83 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(230, 187, 46);
+  background-color: rgb(255, 54, 54);
  
 }
 .filterButton{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+.filterButton button{
+  width: 10rem;
+  padding: 5px 0px;
+}
+
+
+/* loaderSection */
+
+.loaderSection{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media(max-width:576px){
+  .topBarSection{
+    padding: 0 20px;
+  }
+  .landingSection{
+    padding: 0 10px;
+  }
+  .itemSection{
+    margin-top: 90px;
+  }
+  h3{
+    font-weight: 800;
+    font-size: medium;
+    color: rgb(14, 14, 14);
+  }
+  .chainSection{
+    height: 210px;
+  }
+  .vendorBox img{
+    width: 260px;
+    height: 180px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    margin-right: 30px;
+    border-radius: 30px;
+  }
+  .mediaChainSection{
+    margin-top: -30px;
+  }
+  .firmSection {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  .firmOffer{
+    position: absolute;
+    width: 100%;
+    max-width: 88%;
+   
+  } 
+  .firmGroup img{
+    width: 300px;
+    
+  }
+  .productSection{
+    padding: 0 10px;
+  }
+  .filterButton button{
+      width: 5rem;
+      padding: 5px;
+      margin-right: 5px;
+  }
+
 }
