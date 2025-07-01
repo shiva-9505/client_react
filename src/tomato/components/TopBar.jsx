@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const TopBar = () => {
+const TopBar = ({showRegisterHandler}) => {
   return (
    <section className="topBarSection">
         <div className="companyTitle">
             <Link to='/' className='link'>
-                <h2>TOMATO</h2>
+                <h2>HUNGRYPLATE</h2>
             </Link>
         </div>
         <div className="searchBar">
             <input type="text" placeholder='Search....' />
         </div>
         <div className="userAuth">
-            LogIn/Signup
+            <span >LogIn</span>
+            <span onClick={showRegisterHandler}> /SignUp</span>
         </div>
    </section>
   )
