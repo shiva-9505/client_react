@@ -14,6 +14,7 @@ const LandingPage = () => {
   const [showAll, setShowAll] = useState(true);
   const [showLogout, setShowLogout] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user_token'));
+  const [searchQuery, setSearchQuery] = useState("");
 
 
   const showRegisterHandler = () => {
@@ -29,9 +30,13 @@ const LandingPage = () => {
     setShowLogout(false)
   }
   const showLogoutHandler = () => {
-    confirm("Are Sure want to Logout")
+    const confirmLogout=window.confirm("Are you sure you want to Logout??");
+    if(!confirmLogout){
+      return;
+    }
     localStorage.removeItem('user_token');
     localStorage.removeItem('user_email');
+    
     setIsLoggedIn(false);
     setShowRegister(false);
     setShowAll(true);
@@ -41,13 +46,15 @@ const LandingPage = () => {
 
   return (
     <div>
-      <TopBar showRegisterHandler={showRegisterHandler} showLoginHandler={showLoginHandler} showLogoutHandler={showLogoutHandler} isLoggedIn={isLoggedIn}/>
+      <TopBar showRegisterHandler={showRegisterHandler} showLoginHandler={showLoginHandler} 
+      showLogoutHandler={showLogoutHandler} isLoggedIn={isLoggedIn} 
+      searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       <div className="landingSection">
-        {showAll && <ItemsDisplay />}
+        {showAll && <ItemsDisplay searchQuery={searchQuery}/>}
         {showAll && <Chains />}
-        {showAll && <FirmCollection />}
+        {showAll && <FirmCollection searchQuery={searchQuery}/>}
         {showRegister && <Register showLoginHandler={showLoginHandler} />}
-        {showLogin && <Login showLogoutHandler={showLogoutHandler} setIsLoggedIn={setIsLoggedIn}/>}
+        {showLogin && <Login showLogoutHandler={showLogoutHandler} setIsLoggedIn={setIsLoggedIn} />}
 
         {/* <Register /> */}
       </div>

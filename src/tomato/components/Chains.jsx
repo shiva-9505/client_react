@@ -3,6 +3,7 @@ import { API_URL } from '../api'
 import { FaArrowAltCircleLeft } from "react-icons/fa"
 import { FaArrowAltCircleRight } from "react-icons/fa"
 import { ClipLoader, RingLoader } from 'react-spinners'
+import {Link} from 'react-router-dom'
 
 const Chains = () => {
 
@@ -79,9 +80,11 @@ const Chains = () => {
                         {/* <div>
                             {item.firmName}
                         </div> */}
-                        <div className="firmImage">
+                         <Link to={`/products/${item._id}/${item.firmName}`} className="link" key={item._id}>
+                        <div className="firmImage"> 
                             <img src={item.image}/*{`${API_URL}/uploads/${item.image}`}*/ alt={item.firmName}/>
                         </div>
+                        </Link>
                         </>
                     )  
                 })}

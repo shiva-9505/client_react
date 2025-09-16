@@ -26,6 +26,12 @@ body{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
+.searchBar{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 300px;
+}
 .companyTitle h2{
   color: rgb(220, 0, 0);
   text-decoration: none;
@@ -408,4 +414,144 @@ body{
 .resend-section button{
   padding: 5px;
   margin: 2px;
+}
+
+
+
+/* ===== CART SECTION STYLES ===== */
+
+.cartSection {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cartSection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cartItemBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartItemBox strong {
+  font-size: 16px;
+}
+
+.cartItemBox button {
+  margin: 0 5px;
+  padding: 4px 10px;
+  background: #e36900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cartItemBox button:hover {
+  background: #c45200;
+}
+
+.cartSection h4 {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+  color: #222;
+}
+
+.cartSection h5 {
+  margin-top: 30px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.cartSection input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cartSection button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: #e36900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.cartSection button:hover {
+  background: #c45200;
+}
+
+
+/* Order success page */
+
+.orderSuccessPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.orderCard {
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.orderCard h2 {
+  color: green;
+  margin-bottom: 15px;
+}
+
+.orderCard h4 {
+  color: #e36900;
+  margin: 10px 0;
+}
+
+.backBtn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #e36900;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.backBtn:hover {
+  background: #c45200;
+}
+
+/* order status section */
+
+.orderStatusSection {
+  max-width: 600px;
+  margin: 130px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fffefc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
